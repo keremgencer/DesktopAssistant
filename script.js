@@ -1,4 +1,5 @@
-let body = document.getElementsByTagName("body")[0];
+/*js examples*/
+let body = document.getElementsByClassName("background")[0];
 let hsvValue = 1;
 
 setInterval(() => {
@@ -8,3 +9,16 @@ setInterval(() => {
     }
     hsvValue++;
 }, 100)
+
+let leftArrow = document.getElementById("clock-left-arrow");
+let clock = document.getElementById("clock");
+leftArrow.addEventListener("click", () => {
+
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+});
+/*js examples end*/
